@@ -1,8 +1,7 @@
-name: colors_covertor
+name: colors_coverter
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/r-mzy47/colors_converter
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

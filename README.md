@@ -1,6 +1,6 @@
-# colors_covertor
+# flutter_colors_coverter
 
-A new Flutter package project.
+dart colors cenvorter library.
 
 ## Getting Started
 
