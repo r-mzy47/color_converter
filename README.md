@@ -1,4 +1,4 @@
-# flutter_colors_coverter
+# colors_coverter
 
 dart colors cenvorter library.
 
