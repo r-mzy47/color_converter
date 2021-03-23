@@ -1,5 +1,5 @@
 name: color_converter
-description: A new Flutter package project.
+description: dart color converter library. suitable for create, convert, and edit colors. It converts all ways between RGB, CMYK, HSB, HSL, XYZ, LAB.
 version: 0.0.1
 homepage: https://github.com/r-mzy47/color_converter
 
@@ -14,6 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  test: any
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
