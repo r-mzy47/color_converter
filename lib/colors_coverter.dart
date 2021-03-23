@@ -1,3 +1,3 @@
-library colors_converter;
+library color_converter;
 
 export 'src/main.dart';

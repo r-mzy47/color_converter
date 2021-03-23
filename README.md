@@ -1,6 +1,6 @@
-# colors_converter
+# color_converter
 
-dart colors converter library.
+dart color converter library.
 
 ## Getting Started
 

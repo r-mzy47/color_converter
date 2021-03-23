@@ -1,7 +1,7 @@
-name: ccolors_converter
+name: color_converter
 description: A new Flutter package project.
 version: 0.0.1
-homepage: https://github.com/r-mzy47/colors_converter
+homepage: https://github.com/r-mzy47/color_converter
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
