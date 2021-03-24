@@ -3,7 +3,10 @@ num abs(num) => num.abs();
 abstract class BaseColor {
   String toHex();
 
-  bool operator==(Object color) {
+
+
+  // ignore: hash_and_equals
+  bool operator ==(Object color) {
     if (color is BaseColor) {
       final _v1 = toHex().replaceAll('#', '').split('');
 
@@ -12,7 +15,7 @@ abstract class BaseColor {
       final _b1 = int.parse(_v1[4].toString() + _v1[5].toString(), radix: 16);
 
       final _v2 = color.toHex().replaceAll('#', '').split('');
-      
+
       final _r2 = int.parse(_v2[0].toString() + _v2[1].toString(), radix: 16);
       final _g2 = int.parse(_v2[2].toString() + _v2[3].toString(), radix: 16);
       final _b2 = int.parse(_v2[4].toString() + _v2[5].toString(), radix: 16);
@@ -22,5 +25,4 @@ abstract class BaseColor {
     }
     return false;
   }
-
 }
