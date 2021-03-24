@@ -1,5 +1,9 @@
 import 'dart:math';
-
+import 'rgb.dart';
+import 'hsb.dart';
+import 'cmyk.dart';
+import 'lab.dart';
+import 'xyz.dart';
 import 'package:color_converter/src/base_color.dart';
 import 'package:flutter/foundation.dart';
 
@@ -84,5 +88,29 @@ class HSL extends BaseColor {
       return hex.length == 1 ? '0' + hex : hex;
     };
     return "#" + toHex(_r) + toHex(_g) + toHex(_b);
+  }
+
+    CMYK toCmyk() {
+    return CMYK.fromHex(toHex());
+  }
+
+  RGB toRgb() {
+    return RGB.fromHex(toHex());
+  }
+
+  HSB toHsb() {
+    return HSB.fromHex(toHex());
+  }
+
+  HSL toHsl() {
+    return HSL.fromHex(toHex());
+  }
+
+  LAB toLab() {
+    return LAB.fromHex(toHex());
+  }
+
+  XYZ toXyz() {
+    return XYZ.fromHex(toHex());
   }
 }

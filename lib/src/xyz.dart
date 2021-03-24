@@ -1,5 +1,9 @@
 import 'dart:math';
-
+import 'rgb.dart';
+import 'cmyk.dart';
+import 'hsl.dart';
+import 'lab.dart';
+import 'hsb.dart';
 import 'package:color_converter/src/base_color.dart';
 import 'package:flutter/foundation.dart';
 
@@ -44,11 +48,9 @@ class XYZ extends BaseColor {
     double _y = y / 100;
     double _z = z / 100;
 
-
-     double _r = _x * 3.2406 + _y * -1.5372 + _z * -0.4986;
-     double _g = _x * -0.9689 + _y * 1.8758 + _z * 0.0415;
-     double _b =_x * 0.0557 + _y * -0.2040 + _z * 1.0570;
-
+    double _r = _x * 3.2406 + _y * -1.5372 + _z * -0.4986;
+    double _g = _x * -0.9689 + _y * 1.8758 + _z * 0.0415;
+    double _b = _x * 0.0557 + _y * -0.2040 + _z * 1.0570;
 
     _r = _r > 0.0031308 ? 1.055 * pow(_r, 1 / 2.4) - 0.055 : _r * 12.92;
     _g = _g > 0.0031308 ? 1.055 * pow(_g, 1 / 2.4) - 0.055 : _g * 12.92;
@@ -62,6 +64,29 @@ class XYZ extends BaseColor {
         toHex(max(0, min(1, _r)).toDouble()) +
         toHex(max(0, min(1, _g)).toDouble()) +
         toHex(max(0, min(1, _b)).toDouble());
-    }
-  
+  }
+
+  CMYK toCmyk() {
+    return CMYK.fromHex(toHex());
+  }
+
+  RGB toRgb() {
+    return RGB.fromHex(toHex());
+  }
+
+  HSB toHsb() {
+    return HSB.fromHex(toHex());
+  }
+
+  HSL toHsl() {
+    return HSL.fromHex(toHex());
+  }
+
+  LAB toLab() {
+    return LAB.fromHex(toHex());
+  }
+
+  XYZ toXyz() {
+    return XYZ.fromHex(toHex());
+  }
 }

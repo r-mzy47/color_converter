@@ -1,5 +1,9 @@
 import 'dart:math';
-
+import 'rgb.dart';
+import 'cmyk.dart';
+import 'hsl.dart';
+import 'hsb.dart';
+import 'xyz.dart';
 import 'package:color_converter/src/base_color.dart';
 import 'package:flutter/foundation.dart';
 
@@ -57,9 +61,12 @@ class LAB extends BaseColor {
         _g,
         _b;
 
-    _x = 0.95047 * ((_x * _x * _x > 0.008856) ? _x * _x * _x : (_x - 16 / 116) / 7.787);
-    _y = 1.00000 * ((_y * _y * _y > 0.008856) ? _y * _y * _y : (_y - 16 / 116) / 7.787);
-    _z = 1.08883 * ((_z * _z * _z > 0.008856) ? _z * _z * _z : (_z - 16 / 116) / 7.787);
+    _x = 0.95047 *
+        ((_x * _x * _x > 0.008856) ? _x * _x * _x : (_x - 16 / 116) / 7.787);
+    _y = 1.00000 *
+        ((_y * _y * _y > 0.008856) ? _y * _y * _y : (_y - 16 / 116) / 7.787);
+    _z = 1.08883 *
+        ((_z * _z * _z > 0.008856) ? _z * _z * _z : (_z - 16 / 116) / 7.787);
 
     _r = _x * 3.2406 + _y * -1.5372 + _z * -0.4986;
     _g = _x * -0.9689 + _y * 1.8758 + _z * 0.0415;
@@ -77,5 +84,29 @@ class LAB extends BaseColor {
         toHex(max(0, min(1, _r)).toDouble()) +
         toHex(max(0, min(1, _g)).toDouble()) +
         toHex(max(0, min(1, _b)).toDouble());
-    }
+  }
+
+  CMYK toCmyk() {
+    return CMYK.fromHex(toHex());
+  }
+
+  RGB toRgb() {
+    return RGB.fromHex(toHex());
+  }
+
+  HSB toHsb() {
+    return HSB.fromHex(toHex());
+  }
+
+  HSL toHsl() {
+    return HSL.fromHex(toHex());
+  }
+
+  LAB toLab() {
+    return LAB.fromHex(toHex());
+  }
+
+  XYZ toXyz() {
+    return XYZ.fromHex(toHex());
+  }
 }
