@@ -8,7 +8,7 @@ dart color converter library. suitable for create, convert, and edit colors. It 
 
 ```yaml
 dependencies:
-  color_converter: any
+  color_converter: ^0.1.1
 ```
 
 2. Get the package using your IDE's GUI or via command line with

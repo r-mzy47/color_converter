@@ -1,6 +1,6 @@
 name: color_converter
 description: dart color converter library. suitable for create, convert, and edit colors. It converts all ways between RGB, CMYK, HSB, HSL, XYZ, LAB.
-version: 0.0.1
+version: 0.1.1
 homepage: https://github.com/r-mzy47/color_converter
 
 environment:
