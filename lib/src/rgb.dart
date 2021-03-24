@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'base_color.dart';
 import 'hsb.dart';
 import 'cmyk.dart';
@@ -8,14 +6,14 @@ import 'lab.dart';
 import 'xyz.dart';
 
 class RGB extends BaseColor {
-  int r;
-  int g;
-  int b;
+  late int r;
+  late int g;
+  late int b;
 
   RGB({
-    @required this.r,
-    @required this.g,
-    @required this.b,
+    required this.r,
+    required this.g,
+    required this.b,
   });
 
   RGB.fromHex(String hex) {

@@ -1,9 +1,7 @@
-num abs(num) => num.abs();
+num abs(num number) => number.abs();
 
 abstract class BaseColor {
   String toHex();
-
-
 
   // ignore: hash_and_equals
   bool operator ==(Object color) {

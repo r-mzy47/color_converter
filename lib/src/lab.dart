@@ -4,18 +4,18 @@ import 'cmyk.dart';
 import 'hsl.dart';
 import 'hsb.dart';
 import 'xyz.dart';
-import 'package:color_converter/src/base_color.dart';
-import 'package:flutter/foundation.dart';
+import 'base_color.dart';
+
 
 class LAB extends BaseColor {
-  double l;
-  double a;
-  double b;
+  late double l;
+  late double a;
+  late double b;
 
   LAB({
-    @required this.l,
-    @required this.a,
-    @required this.b,
+    required this.l,
+    required this.a,
+    required this.b,
   });
 
   LAB.fromHex(String hex) {
@@ -30,17 +30,17 @@ class LAB extends BaseColor {
 
     double _x, _y, _z;
 
-    _r = (_r > 0.04045) ? pow((_r + 0.055) / 1.055, 2.4) : _r / 12.92;
-    _g = (_g > 0.04045) ? pow((_g + 0.055) / 1.055, 2.4) : _g / 12.92;
-    _b = (_b > 0.04045) ? pow((_b + 0.055) / 1.055, 2.4) : _b / 12.92;
+    _r = (_r > 0.04045) ? pow((_r + 0.055) / 1.055, 2.4) as double : _r / 12.92;
+    _g = (_g > 0.04045) ? pow((_g + 0.055) / 1.055, 2.4) as double : _g / 12.92;
+    _b = (_b > 0.04045) ? pow((_b + 0.055) / 1.055, 2.4) as double : _b / 12.92;
 
     _x = (_r * 0.4124 + _g * 0.3576 + _b * 0.1805) / 0.95047;
     _y = (_r * 0.2126 + _g * 0.7152 + _b * 0.0722) / 1.00000;
     _z = (_r * 0.0193 + _g * 0.1192 + _b * 0.9505) / 1.08883;
 
-    _x = (_x > 0.008856) ? pow(_x, 1 / 3) : (7.787 * _x) + 16 / 116;
-    _y = (_y > 0.008856) ? pow(_y, 1 / 3) : (7.787 * _y) + 16 / 116;
-    _z = (_z > 0.008856) ? pow(_z, 1 / 3) : (7.787 * _z) + 16 / 116;
+    _x = (_x > 0.008856) ? pow(_x, 1 / 3) as double : (7.787 * _x) + 16 / 116;
+    _y = (_y > 0.008856) ? pow(_y, 1 / 3) as double : (7.787 * _y) + 16 / 116;
+    _z = (_z > 0.008856) ? pow(_z, 1 / 3) as double : (7.787 * _z) + 16 / 116;
 
     l = ((116 * _y - 16) * 10).roundToDouble() / 10;
     a = (500 * (_x - _y) * 10).roundToDouble() / 10;

@@ -4,18 +4,17 @@ import 'cmyk.dart';
 import 'hsl.dart';
 import 'lab.dart';
 import 'hsb.dart';
-import 'package:color_converter/src/base_color.dart';
-import 'package:flutter/foundation.dart';
+import 'base_color.dart';
 
 class XYZ extends BaseColor {
-  double x;
-  double y;
-  double z;
+  late double x;
+  late double y;
+  late double z;
 
   XYZ({
-    @required this.x,
-    @required this.y,
-    @required this.z,
+    required this.x,
+    required this.y,
+    required this.z,
   });
 
   XYZ.fromHex(String hex) {
@@ -28,9 +27,9 @@ class XYZ extends BaseColor {
     double _b =
         int.parse(values[4].toString() + values[5].toString(), radix: 16) / 255;
 
-    _r = _r <= 0.04045 ? _r / 12.92 : pow((_r + 0.055) / 1.055, 2.4);
-    _g = _g <= 0.04045 ? _g / 12.92 : pow((_g + 0.055) / 1.055, 2.4);
-    _b = _b <= 0.04045 ? _b / 12.92 : pow((_b + 0.055) / 1.055, 2.4);
+    _r = _r <= 0.04045 ? _r / 12.92 : pow((_r + 0.055) / 1.055, 2.4) as double;
+    _g = _g <= 0.04045 ? _g / 12.92 : pow((_g + 0.055) / 1.055, 2.4) as double;
+    _b = _b <= 0.04045 ? _b / 12.92 : pow((_b + 0.055) / 1.055, 2.4) as double;
 
     x = (0.4124 * _r + 0.3576 * _g + 0.1805 * _b) * 100;
     y = (0.2126 * _r + 0.7152 * _g + 0.0722 * _b) * 100;

@@ -5,17 +5,16 @@ import 'cmyk.dart';
 import 'lab.dart';
 import 'xyz.dart';
 import 'package:color_converter/src/base_color.dart';
-import 'package:flutter/foundation.dart';
 
 class HSL extends BaseColor {
-  double h;
-  double s;
-  double l;
+  late double h;
+  late double s;
+  late double l;
 
   HSL({
-    @required this.h,
-    @required this.s,
-    @required this.l,
+    required this.h,
+    required this.s,
+    required this.l,
   });
 
   HSL.fromHex(String hex) {
@@ -31,7 +30,7 @@ class HSL extends BaseColor {
     final minN = min(_r, min(_g, _b));
 
     final _l = (maxN + minN) / 2;
-    double _h, _s;
+    double _h = 0, _s = 0;
 
     if (maxN == minN) {
       _h = _s = 0;

@@ -4,20 +4,20 @@ import 'hsb.dart';
 import 'hsl.dart';
 import 'lab.dart';
 import 'xyz.dart';
-import 'package:color_converter/src/base_color.dart';
-import 'package:flutter/foundation.dart';
+import 'base_color.dart';
+
 
 class CMYK extends BaseColor {
-  int c;
-  int m;
-  int y;
-  int k;
+  late int c;
+  late int m;
+  late int y;
+  late int k;
 
   CMYK({
-    @required this.c,
-    @required this.m,
-    @required this.y,
-    @required this.k,
+    required this.c,
+    required this.m,
+    required this.y,
+    required this.k,
   });
 
   CMYK.fromHex(String hex) {
