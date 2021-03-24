@@ -102,10 +102,6 @@ class LAB extends BaseColor {
     return HSL.fromHex(toHex());
   }
 
-  LAB toLab() {
-    return LAB.fromHex(toHex());
-  }
-
   XYZ toXyz() {
     return XYZ.fromHex(toHex());
   }

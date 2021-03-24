@@ -85,8 +85,4 @@ class XYZ extends BaseColor {
   LAB toLab() {
     return LAB.fromHex(toHex());
   }
-
-  XYZ toXyz() {
-    return XYZ.fromHex(toHex());
-  }
 }

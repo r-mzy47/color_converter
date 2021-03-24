@@ -102,10 +102,6 @@ class HSL extends BaseColor {
     return HSB.fromHex(toHex());
   }
 
-  HSL toHsl() {
-    return HSL.fromHex(toHex());
-  }
-
   LAB toLab() {
     return LAB.fromHex(toHex());
   }

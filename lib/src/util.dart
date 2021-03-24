@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:color_converter/src/base_color.dart';
 import 'rgb.dart';
 import 'cmyk.dart';
 import 'hsb.dart';

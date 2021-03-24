@@ -63,10 +63,6 @@ class CMYK extends BaseColor {
         toHex((1 - _y) * (1 - _k));
   }
 
-  CMYK toCmyk() {
-    return CMYK.fromHex(toHex());
-  }
-
   RGB toRgb() {
     return RGB.fromHex(toHex());
   }

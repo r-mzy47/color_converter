@@ -39,12 +39,8 @@ class RGB extends BaseColor {
     return '$r, $g, $b';
   }
 
-    CMYK toCmyk() {
+  CMYK toCmyk() {
     return CMYK.fromHex(toHex());
-  }
-
-  RGB toRgb() {
-    return RGB.fromHex(toHex());
   }
 
   HSB toHsb() {

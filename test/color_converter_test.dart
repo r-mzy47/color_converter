@@ -1,4 +1,3 @@
-import 'package:color_converter/src/base_color.dart';
 import 'package:test/test.dart';
 import 'package:color_converter/color_converter.dart';
 

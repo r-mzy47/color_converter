@@ -116,10 +116,6 @@ class HSB extends BaseColor {
     return RGB.fromHex(toHex());
   }
 
-  HSB toHsb() {
-    return HSB.fromHex(toHex());
-  }
-
   HSL toHsl() {
     return HSL.fromHex(toHex());
   }
