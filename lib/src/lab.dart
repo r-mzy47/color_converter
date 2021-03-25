@@ -6,7 +6,6 @@ import 'hsb.dart';
 import 'xyz.dart';
 import 'base_color.dart';
 
-
 class LAB extends BaseColor {
   late double l;
   late double a;

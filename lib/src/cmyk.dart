@@ -6,7 +6,6 @@ import 'lab.dart';
 import 'xyz.dart';
 import 'base_color.dart';
 
-
 class CMYK extends BaseColor {
   late int c;
   late int m;

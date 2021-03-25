@@ -2,7 +2,6 @@ import 'package:test/test.dart';
 import 'package:color_converter/color_converter.dart';
 
 void main() {
-
   group("RGB - ", () {
     test('hex to hex', () {
       final initialHex = "#faf345";
@@ -62,7 +61,7 @@ void main() {
       expect(lab, RGB.fromHex(initialHex));
     });
     test('lab to hex', () {
-      final lab = LAB(l: 57.259, a: 14.345, b:-14.588);
+      final lab = LAB(l: 57.259, a: 14.345, b: -14.588);
       expect(lab, RGB.fromHex("#9782a3"));
     });
   });

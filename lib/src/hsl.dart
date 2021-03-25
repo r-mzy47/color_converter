@@ -89,7 +89,7 @@ class HSL extends BaseColor {
     return "#" + toHex(_r) + toHex(_g) + toHex(_b);
   }
 
-    CMYK toCmyk() {
+  CMYK toCmyk() {
     return CMYK.fromHex(toHex());
   }
 

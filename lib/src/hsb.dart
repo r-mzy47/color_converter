@@ -6,7 +6,6 @@ import 'lab.dart';
 import 'xyz.dart';
 import 'base_color.dart';
 
-
 class HSB extends BaseColor {
   late double h;
   late double s;
@@ -21,9 +20,12 @@ class HSB extends BaseColor {
   HSB.fromHex(String hex) {
     final values = hex.replaceAll('#', '').split('');
 
-    final _r = int.parse(values[0].toString() + values[1].toString(), radix: 16);
-    final _g = int.parse(values[2].toString() + values[3].toString(), radix: 16).toDouble();
-    final _b = int.parse(values[4].toString() + values[5].toString(), radix: 16);
+    final _r =
+        int.parse(values[0].toString() + values[1].toString(), radix: 16);
+    final _g = int.parse(values[2].toString() + values[3].toString(), radix: 16)
+        .toDouble();
+    final _b =
+        int.parse(values[4].toString() + values[5].toString(), radix: 16);
 
     final _maximum = max(max(_r, _g), _b);
     final _minimum = min(_r, min(_g, _b));
@@ -108,7 +110,7 @@ class HSB extends BaseColor {
     return "#" + toHex(_r) + toHex(_g) + toHex(_b);
   }
 
-    CMYK toCmyk() {
+  CMYK toCmyk() {
     return CMYK.fromHex(toHex());
   }
 

@@ -18,8 +18,9 @@ abstract class BaseColor {
       final _g2 = int.parse(_v2[2].toString() + _v2[3].toString(), radix: 16);
       final _b2 = int.parse(_v2[4].toString() + _v2[5].toString(), radix: 16);
 
-      if (abs(_r1 - _r2) < 3 && abs(_g1 - _g2) < 3 && abs(_b1 - _b2) < 3)
+      if (abs(_r1 - _r2) < 3 && abs(_g1 - _g2) < 3 && abs(_b1 - _b2) < 3) {
         return true;
+      }
     }
     return false;
   }
